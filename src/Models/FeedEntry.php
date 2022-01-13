@@ -63,6 +63,20 @@ class FeedEntry
         // get the summary
         $summary = $this->summary;
 
+        // Hack to handle Bard elements
+        if(is_array($summary)) {
+            $new_summary = '';
+  
+            foreach($summary as $section) {
+              if(!empty($section['type']) && $section['type'] === 'text') {
+                $new_summary = $section['text'];
+                break;
+              }
+            }
+  
+            $summary = $new_summary;
+        }
+
         // if the summary is not a paragraph already, wrap it
         if ($summary && substr($summary, 0, 3) != '<p>') {
             $summary = '<p>'.$summary.'</p>';
