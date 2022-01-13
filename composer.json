@@ -1,6 +1,6 @@
 {
-    "name": "mitydigital/statamic-rss-feed",
-    "description": "A simple RSS feed generator for a given collection in Statamic 3.",
+    "name": "martinvandersteen/statamic-rss-feed",
+    "description": "A simple RSS feed generator for a given collection in Statamic 3. Fork for Bard support of mitydigital/statamic-rss-feed.",
     "type": "statamic-addon",
     "keywords": [
         "statamic",
